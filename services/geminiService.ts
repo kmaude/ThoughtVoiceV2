@@ -1,6 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
-import { Topic, DailyPrompt, GeneratedAssets, UserProfile, PromptStatus, Source } from "../types";
-import { db } from "./database";
+import { Topic, DailyPrompt, GeneratedAssets, UserProfile, PromptStatus, Source } from "../types.ts";
+import { db } from "./database.ts";
 
 // Initialize GenAI
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });

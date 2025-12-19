@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import { Onboarding } from './pages/Onboarding';
-import { Login } from './pages/Login';
-import { Dashboard } from './pages/Dashboard';
-import { Capture } from './pages/Capture';
-import { Editor } from './pages/Editor';
-import { Library } from './pages/Library';
-import { InternalDashboard } from './pages/InternalDashboard';
-import { Review } from './pages/Review';
-import { Profile } from './pages/Profile';
-import { db } from './services/database';
+import { Layout } from './components/Layout.tsx';
+import { Onboarding } from './pages/Onboarding.tsx';
+import { Login } from './pages/Login.tsx';
+import { Dashboard } from './pages/Dashboard.tsx';
+import { Capture } from './pages/Capture.tsx';
+import { Editor } from './pages/Editor.tsx';
+import { Library } from './pages/Library.tsx';
+import { InternalDashboard } from './pages/InternalDashboard.tsx';
+import { Review } from './pages/Review.tsx';
+import { Profile } from './pages/Profile.tsx';
+import { db } from './services/database.ts';
 
 const ProtectedRoute = ({ children }: { children?: React.ReactNode }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
