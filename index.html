@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThoughtVoice | Executive Intelligence Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'tv-teal': '#14B8A6',
+              'tv-coral': '#FB7185',
+              'tv-yellow': '#FCD34D',
+              'tv-dark': '#1E293B',
+            },
+            animation: {
+              'spin-slow': 'spin 3s linear infinite',
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'fade-in-up': 'fadeInUp 0.5s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* OWL ANIMATIONS */
+      
+      @keyframes flap {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(10deg); }
+      }
+      @keyframes flapRight {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(-10deg); }
+      }
+      @keyframes blink {
+        0%, 48%, 52%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(0.1); }
+      }
+      
+      /* V9 Badge Owl Pivot Points */
+      
+      /* Left Wing - Pivot at shoulder (25px, 45px) */
+      .owl-wing-left { 
+        transform-origin: 25px 45px; 
+        animation: flap 0.8s ease-in-out infinite alternate; 
+      }
+      
+      /* Right Wing - Pivot at shoulder (75px, 45px) */
+      .owl-wing-right { 
+        transform-origin: 75px 45px; 
+        animation: flapRight 0.8s ease-in-out infinite alternate; 
+      }
+      
+      /* Eyes - Pivot at center Y (42px) */
+      .owl-eye { 
+        transform-origin: center 42px; 
+        animation: blink 4s infinite; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@supabase/supabase-js": "https://aistudiocdn.com/@supabase/supabase-js@^2.45.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+  </body>
+</html>

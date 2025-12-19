@@ -1,0 +1,8 @@
+{
+  "name": "ThoughtVoice  - Prompt UPdate",
+  "description": "AI-powered executive thought leadership platform handling voice/video capture, strategic research, and multi-channel content generation.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
